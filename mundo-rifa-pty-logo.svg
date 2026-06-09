@@ -1,0 +1,77 @@
+<svg width="360" height="80" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>MUNDO RIFA PTY Logo</title>
+  <defs>
+    <filter id="glow-green" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur1"/>
+      <feGaussianBlur stdDeviation="5" result="blur2"/>
+      <feMerge><feMergeNode in="blur2"/><feMergeNode in="blur1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-blue" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2" result="blur1"/>
+      <feGaussianBlur stdDeviation="4.5" result="blur2"/>
+      <feMerge><feMergeNode in="blur2"/><feMergeNode in="blur1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="grad-main" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="50%" stop-color="#00ffcc"/>
+      <stop offset="100%" stop-color="#00aaff"/>
+    </linearGradient>
+    <linearGradient id="grad-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff8800"/>
+      <stop offset="25%" stop-color="#00ff88"/>
+      <stop offset="75%" stop-color="#00aaff"/>
+      <stop offset="100%" stop-color="#00aaff00"/>
+    </linearGradient>
+    <style>
+      @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.65} }
+      @keyframes blink { 0%,88%,100%{opacity:1} 94%{opacity:0.25} }
+      .p { animation: pulse 2.4s ease-in-out infinite; }
+      .b { animation: blink 4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Corner brackets -->
+  <polyline points="2,14 2,2 16,2" fill="none" stroke="#00ff88" stroke-width="1.5" filter="url(#glow-green)" class="b"/>
+  <polyline points="344,2 358,2 358,14" fill="none" stroke="#00aaff" stroke-width="1.5" filter="url(#glow-blue)" class="b"/>
+  <polyline points="2,66 2,78 16,78" fill="none" stroke="#00ff88" stroke-width="1.5" filter="url(#glow-green)" class="b"/>
+  <polyline points="344,78 358,78 358,66" fill="none" stroke="#00aaff" stroke-width="1.5" filter="url(#glow-blue)" class="b"/>
+
+  <!-- Top / bottom lines -->
+  <line x1="20" y1="8" x2="340" y2="8" stroke="url(#grad-line)" stroke-width="0.5" class="p"/>
+  <line x1="20" y1="72" x2="340" y2="72" stroke="url(#grad-line)" stroke-width="0.5" class="p"/>
+
+  <!-- Hex emblem con M -->
+  <g transform="translate(36,40)" filter="url(#glow-green)" class="p">
+    <polygon points="0,-20 17,-10 17,10 0,20 -17,10 -17,-10" fill="none" stroke="#00ff88" stroke-width="1.2"/>
+    <polygon points="0,-12 10,-6 10,6 0,12 -10,6 -10,-6" fill="#00ff8812" stroke="#00ff8855" stroke-width="0.7"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Courier New',monospace" font-size="13" font-weight="700" fill="#00ff88">M</text>
+  </g>
+
+  <!-- Separator -->
+  <line x1="62" y1="16" x2="62" y2="64" stroke="#00ff8840" stroke-width="0.7"/>
+
+  <!-- MUNDO main text -->
+  <text x="70" y="46" font-family="'Courier New',monospace" font-size="28" font-weight="700" letter-spacing="5" fill="url(#grad-main)" filter="url(#glow-green)">MUNDO</text>
+
+  <!-- Sub line -->
+  <line x1="70" y1="51" x2="288" y2="51" stroke="#00ff8830" stroke-width="0.5"/>
+
+  <!-- RIFA PTY sub text -->
+  <text x="72" y="66" font-family="'Courier New',monospace" font-size="13" font-weight="400" letter-spacing="7" fill="#00ccff" filter="url(#glow-blue)">RIFA PTY</text>
+
+  <!-- Right crosshair accent -->
+  <g transform="translate(322,40)" filter="url(#glow-blue)" class="p">
+    <line x1="-10" y1="0" x2="10" y2="0" stroke="#00aaff" stroke-width="0.7" stroke-dasharray="3,2"/>
+    <line x1="0" y1="-10" x2="0" y2="10" stroke="#00aaff" stroke-width="0.7" stroke-dasharray="3,2"/>
+    <circle cx="0" cy="0" r="3.5" fill="none" stroke="#00aaff" stroke-width="1"/>
+    <circle cx="0" cy="0" r="1" fill="#00aaff"/>
+  </g>
+
+  <!-- Dot grid right -->
+  <g class="b" opacity="0.55">
+    <circle cx="340" cy="24" r="1" fill="#00ff88" filter="url(#glow-green)"/>
+    <circle cx="347" cy="24" r="1" fill="#00aaff"/>
+    <circle cx="340" cy="30" r="1" fill="#00aaff"/>
+    <circle cx="347" cy="30" r="1" fill="#00ff88"/>
+  </g>
+</svg>
